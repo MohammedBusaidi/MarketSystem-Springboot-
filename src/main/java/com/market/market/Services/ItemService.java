@@ -17,6 +17,6 @@ public class ItemService {
         return itemRepository.findAll();
     }
     public Item getItemById(Integer id) {
-        return itemRepository.getById(id);
+        return itemRepository.findById(id).get();
     }
 }

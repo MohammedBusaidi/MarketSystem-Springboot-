@@ -18,7 +18,7 @@ public class ItemController {
     public List<Item> findItems() {
         return itemService.getAllItems();
     }
-    @GetMapping(value = "getAll")
+    @GetMapping(value = "getById")
     public Item getItemById(@RequestParam Integer id) {
     return itemService.getItemById(id);
     }

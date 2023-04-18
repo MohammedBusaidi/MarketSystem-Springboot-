@@ -17,9 +17,10 @@ public class MarketController {
 
     @RequestMapping(value = "getAll", method = RequestMethod.GET)
     public List<Market> findMarkets() {
-         return marketService.getAllMarket();
+        return marketService.getAllMarket();
     }
-    @GetMapping(value = "getById")
+
+    @RequestMapping(value = "getById", method = RequestMethod.GET)
     public Market getMarketById(@RequestParam Integer id) {
         return marketService.getMarketById(id);
     }

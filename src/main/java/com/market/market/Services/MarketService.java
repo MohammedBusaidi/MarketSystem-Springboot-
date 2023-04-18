@@ -18,7 +18,7 @@ public class MarketService {
     }
 
     public Market getMarketById(Integer id) {
-        return marketRepository.getById(id);
+        return marketRepository.findById(id).get();
     }
 //    public Market getMarketByName(String name) {
 //        return marketRepository.
