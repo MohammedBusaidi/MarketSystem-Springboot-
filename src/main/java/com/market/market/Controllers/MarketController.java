@@ -21,8 +21,7 @@ public class MarketController {
     }
     @GetMapping(value = "getById")
     public Market getMarketById(@RequestParam Integer id) {
-        Market market = marketService.getMarketById(id);
-        return market;
+        return marketService.getMarketById(id);
     }
 //    @GetMapping(value = "getByName")
 //    public Market getMarketByName(@RequestParam String name) {
