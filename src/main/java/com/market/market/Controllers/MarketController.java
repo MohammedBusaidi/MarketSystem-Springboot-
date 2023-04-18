@@ -3,9 +3,8 @@ package com.market.market.Controllers;
 import com.market.market.Models.Market;
 import com.market.market.Services.MarketService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import org.yaml.snakeyaml.error.Mark;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,4 +19,13 @@ public class MarketController {
     public List<Market> findMarkets() {
          return marketService.getAllMarket();
     }
+    @GetMapping(value = "getById")
+    public Market getMarketById(@RequestParam Integer id) {
+        Market market = marketService.getMarketById(id);
+        return market;
+    }
+//    @GetMapping(value = "getByName")
+//    public Market getMarketByName(@RequestParam String name) {
+//        Market market = marketService
+//    }
 }

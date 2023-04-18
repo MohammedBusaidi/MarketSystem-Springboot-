@@ -13,7 +13,6 @@ public class Market {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Integer id;
-
     String name;
     String location;
 }

@@ -16,4 +16,11 @@ public class MarketService {
     public List<Market> getAllMarket() {
          return marketRepository.findAll();
     }
+
+    public Market getMarketById(Integer id) {
+        return marketRepository.getById(id);
+    }
+//    public Market getMarketByName(String name) {
+//        return marketRepository.
+//    }
 }

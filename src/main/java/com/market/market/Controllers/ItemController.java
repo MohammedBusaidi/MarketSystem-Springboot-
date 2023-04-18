@@ -20,5 +20,4 @@ public class ItemController {
     public List<Item> findItems() {
         return itemService.getAllItems();
     }
-
 }
